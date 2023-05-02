@@ -34,9 +34,11 @@ var b = window.atob(a)
 在nodejs中，存在一个叫 `Buffer.from()` 的方法，该方法可以传入字符串并以合适的格式解码返回  
 这其中就支持base64，它与正常的base64加解密不同(下面我说的内容或许并不正确，实在找不到确切的资料)  
 根据网上找的资料来看，python的base64与js的atob这类方法会自动根据规则在原数据上删除或者添加内容以便解密，具体情况看下面
-![atob报错]("https://raw.githubusercontent.com/ogios/YouDao-Translater/main/example_pics/atob%E6%8A%A5%E9%94%99.jpg")
+![atob报错](https://raw.githubusercontent.com/ogios/YouDao-Translater/main/example_pics/atob%E6%8A%A5%E9%94%99.jpg)
+
 使用自定义的或者Buffer.from就可以成功解码并解密
-![成功解密]("https://github.com/ogios/YouDao-Translater/blob/main/example_pics/js%E8%A7%A3%E5%AF%86%E6%88%90%E5%8A%9F.jpg")
+
+![成功解密](https://github.com/ogios/YouDao-Translater/blob/main/example_pics/js%E8%A7%A3%E5%AF%86%E6%88%90%E5%8A%9F.jpg)
 ```javascript
 var a = "..." #返回的数据
 var b = Buffer.from(a, "base64")
